@@ -1,53 +1,636 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link href="style.css" rel="stylesheet" >
     <meta charset="UTF-8">
-    <title>YouTube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contributing to Open Source Part I: The Easy Way - YouTube</title>
+    <!--start favicon -->
+    <link rel="icon" href="image/youtube.png" type="image/png">
+    <!--end favicon -->
+    <meta name="author" content="Anna & Maya">
+    <meta name="description" content="Embedding Images and Video.">
+    <meta name="keywords" content="HTML, CSS"> 
+    <link rel="stylesheet" href="style.css">
     <!--fonts.ggogleapis to use amazing icons-->
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    	<header>
-                <img id="logo" src="Images/logo.jpg" alt="YouTube home">
-                <img id="menu" src="Images/menu.jpg" alt="">
-                <input type="text"><img id="search" src="Images/search.jpg" alt="" >
-                <ul>
-                    <li>Upload</li>
-                    <li>Sign In</li>
-                </ul>
-            </header>
-        
-            <div id="wrapper">
-        
-                <div id="content">
-        
-                    <div id="video">
-                        <iframe width="650" height="390" src="https://www.youtube.com/embed/wWEF5Ie89ug" allowfullscreen></iframe>
+
+    <!-- START #1 Logic section : Header Navbar -->
+    <header>
+        <div class="flex-container">
+            <div class="nav-icon">
+                <button class="material-icons">menu</button>
+            </div>
+
+            <div class="navbar-logo">
+                <img src="image/yt_logo_rgb_light.png" 
+                alt="Logo Youtube">
+            </div>
+
+            <div id="search">
+                <form action="https://www.google.com/">
+                    <div class="container-form">
+                        <div style="width:100%">
+                            <div class="container-form2">
+                                <div id="container-icon">
+                                    <div class="container-icon2">
+                                        <a href="">
+                                            <span class="material-icons">keyboard</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-container">
+                                        <input type="text" value="" placeholder="Search">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-        
-                    <div id="video-info">
-                        <h2>10,000 hours - Motivational video </h2>
-                        <img src="img/video-info.jpg" alt="">
-                    </div>
-        
-                    <div id="video-description">
-                        <h2>Published on Aug 26, 2014</h2>
-                        <p>10,000 hours Motivational video</p>
-                        <hr>
-                        <a href="#">SHOW MORE</a>
-                    </div>
-        
-                    <div id="comments">
-                        <h2>ALL COMMENTS (356)</h2>
-                        <a href="#">Show more</a>
-                    </div>
+                    <button type="submit" class="material-icons">search</button>
+                </form>
+            </div>
+
+            <div id="buttons">
+                <div class="flex-container">
+                    <button class="material-icons">video_call</button>
                 </div>
-        
-                <div id="sidebar">
-                    <img src="Images/Thumbs.PNG" alt="">
+                <div class="flex-container">
+                    <button class="material-icons">apps</button>
+                </div>
+                <div class="flex-container">
+                    <button class="material-icons">sms</button>
+                </div>
+                <div class="flex-container">
+                    <button class="material-icons">notifications</button>
+                </div>
+                <div class="flex-container">
+                    <img id="image-profile" src="image/photo.jpg" alt="photo of user">
                 </div>
             </div>
+        </div>
+    </header>
+    <!-- END #1 Logic section : Header-->
+
+    <!-- START #2 Logic section => primary container :left sidebar + right sidebar-->
+    <main>
+    <!-- Start left sidebar -->
+        <div> <!-- START ---- main video-->
+            <div id="main_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wWEF5Ie89ug"  
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- END main video-->
+
+            <!-- START info under the video-->
+            <div id="principal-info">
+                <h1>Contributing to Open Source Part I: The Easy Way</h1>
+                <div class="flex-container">
+                    <div>
+                        <span>487,995 views
+                        </span>
+                    </div>
+                    <div class="menu-info flex-container">
+                        <div class="flex-container">
+                            <button class="material-icons btn-info">thumb_up</button>
+                            <a href="#">340</a>
+                        </div>
+                        <div class="flex-container">
+                            <button class="material-icons btn-info">thumb_down</button>
+                            <a href="#">13</a>
+                        </div>
+                        <div class="flex-container">
+                            <button class="material-icons btn-info">reply</button>
+                            <a href="#">SHARE</a>
+                        </div>
+                        <div class="flex-container">
+                            <button class="material-icons btn-info">playlist_add</button>
+                            <a href="#">SAVE</a>
+                        </div>
+                        <div class="flex-container">
+                            <button class="material-icons btn-info">more_horiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END info under the video-->
+
+            <!-- START comments under the video-->
+            <div id="description">
+                <div class="top-row flex-row flex-container">
+                    <div class="img-channel">
+                        <img src="image/channel-img.jpg" alt="Imagem do Canal">
+                    </div>
+                    <div id="channel-info" class="flex-container">
+                        <div>
+                            <a href="#">The Odin Project</a>
+                        </div>
+                        <div>
+                            <span>Published on 29 Apr 2015</span>
+                        </div>
+                    </div>
+                    <div class="div-enrolled flex-row flex-container">
+                        <div class="enrolled">
+                            <button>SUBSCRIBED 756</button>
+                        </div>
+                        <div class="bell-icon">
+                            <button class="material-icons">notifications</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="secundary-description">
+                    <div class="content">
+                        <p>
+                            How do you contribute to open source?  
+                            In this video, I'll describe the easiest way 
+                            to make a simple contribution to an open source project 
+                            -- without using the command line, a text editor, 
+                            "forking a repo", or even touching Git outside of Github. 
+                            I'll also describe what kinds of contributions open source 
+                            software projects are typically looking for.  As an example, 
+                            I use submitting a student solution to a web development 
+                            exercise from The Odin Project, a free online curriculum 
+                            for learning web development with Ruby on Rails.  
+                            You can find more information about that project at 
+                            <a href="http://theodinproject.com">
+                                http://theodinproject.com
+                            </a>.
+                        </p>
+                    </div>
+                    <div class="div-category flex-container">
+                        <div class="category">
+                            <h4>Category</h4>
+                        </div>
+                        <div class="link-category flex-container">
+                            <a href="#">Science & Technology</a>
+                        </div>
+                    </div>
+                    <div class="btn-show">
+                        <button>SHOW MORE</button>
+                    </div>
+                </div>
+            </div>
+            <!-- END description under the video-->
+
+            <!-- START comments under the video-->
+            <div>
+                <div class="header-comments flex-container">
+                    <div class="title flex-container">
+                        <h4>12 Comments</h4>
+                        <div class="div-rank flex-container">
+                            <button class="material-icons">sort</button>
+                            <span>SORT BY</span>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="img-comment">
+                            <img src="https://yt3.ggpht.com/-DRpVl5K8zNY/AAAAAAAAAAI/AAAAAAAAAAA/veECPXFnGnI/s48-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Foto to comments">
+                        </div>
+                        <div class="div-input-comment">
+                            <input type="text" placeholder="Add a public comment...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- START comments under the video -->
+                <div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/wing-n.jpg" alt="Wing N.">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">Wing N.</a>
+                                        <a href="#" class="time">1 year ago (edited)</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                        use your brain and body to be inspired and motivated
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span>7</span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                            <div class="flex-row">
+                                <div class="img-comment">
+                                    <img src="https://yt3.ggpht.com/-sWhUdokHTC4/AAAAAAAAAAI/AAAAAAAAAAA/JTl_mLxNhSM/s48-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="andrewscheuermann05">
+                                </div>
+                                <div class="main">
+                                    <div class="header">
+                                        <div class="flex-row">
+                                            <a href="#" class="profile">andrewscheuermann05</a>
+                                            <a href="#" class="time">4 years ago</a>
+                                        </div>
+                                        <div class="content">
+                                            <p>
+                                                Most motivational video I have seen in my life
+                                            </p>
+                                        </div>
+                                        <div class="action flex-row">
+                                            <div>
+                                                <button class="material-icons">thumb_up</button>
+                                                <span>1</span>
+                                            </div>
+                                            <div>
+                                                <button class="material-icons">thumb_down</button>
+                                            </div>
+                                            <div>
+                                                <a href="#">RESPONDER</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/buttonMaster.jpg" alt="ButtonMasher">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">ButtonMasher</a>
+                                        <a href="#" class="time">3 years ago</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            Wow this video was super helpful, clear, 
+                                            and concise. Thank you very much.
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/sibeCute.jpg" alt="Sibe Cute">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">Sibe Cute</a>
+                                        <a href="#" class="time">2 years ago</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            thanks a lot for video
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span>2</span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/Sampath.jpg" alt="Sampath Lokuge">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">Sampath Lokuge</a>
+                                        <a href="#" class="time">3 years ago</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                                Nice.Thanks a lot :)
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/luyi.jpg" alt="Luyi Ren">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">Luyi Ren</a>
+                                        <a href="#" class="time">1 years ago</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            Your video helped me to have motivation ! Thank you so much!
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span> </span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/motorhead.jpg" alt="motorheadbanger90">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">motorheadbanger90</a>
+                                        <a href="#" class="time">1 years ago</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                        Inspirational video; how many people are going to be inspired!
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span> </span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                            <div class="flex-row">
+                                <div class="img-comment">
+                                    <img src="image/Richard.jpg" alt="Richard Dickinson">
+                                </div>
+                                <div class="main">
+                                    <div class="header">
+                                        <div class="flex-row">
+                                            <a href="#" class="profile">Richard Dickinson</a>
+                                            <a href="#" class="time">4 years ago</a>
+                                        </div>
+                                        <div class="content">
+                                            <p>
+                                                These videos are amazing. clear clarity, touching music, really sticks with you, just incredible!
+
+                                            </p>
+                                        </div>
+                                        <div class="action flex-row">
+                                            <div>
+                                                <button class="material-icons">thumb_up</button>
+                                                <span> </span>
+                                            </div>
+                                            <div>
+                                                <button class="material-icons">thumb_down</button>
+                                            </div>
+                                            <div>
+                                                <a href="#">REPLY</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/davidGod.jpg" alt="David Godfrey">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">David Godfrey</a>
+                                        <a href="#" class="time">11 month ago</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            I tried this, it works. Never give up. Much love sent from S.W. FLORIDA!
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span> </span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="flex-row">
+                            <div class="img-comment">
+                                <img src="image/newbbie.jpg" alt="1newbbie">
+                            </div>
+                            <div class="main">
+                                <div class="header">
+                                    <div class="flex-row">
+                                        <a href="#" class="profile">1newbbie</a>
+                                        <a href="#" class="time">6 meses atrás (editado)</a>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                        Very Motivational ! Keep it up 
+                                        </p>
+                                    </div>
+                                    <div class="action flex-row">
+                                        <div>
+                                            <button class="material-icons">thumb_up</button>
+                                            <span> </span>
+                                        </div>
+                                        <div>
+                                            <button class="material-icons">thumb_down</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <!-- START right sidebar primary container -->
+
+        <div id="secondary-container" class="flex-container">
+            <div class="autoplay-header">
+                <div class="play-header flex-row">
+                    <div class="upnext">
+                        Up next
+                    </div>
+                    <div class="autoplay">
+                        AUTOPLAY
+                    </div>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                        <label class="onoffswitch-label" for="myonoffswitch"></label>
+                    </div>
+                </div>
+                <div class="img-video flex-row">
+                    <div class="flex-row">
+                        <div class="video-img">
+                            <iframe height="100" src="https://www.youtube.com/embed/wWEF5Ie89ug" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="metadata">
+                            <a href="#">
+                                <h3>
+                                    Ten Thousand Hours - Motivational Video
+                                </h3>
+                                <div class="metadata2">
+                                    <div class="metadata-channel flex-row">
+                                        Anna Mkenzy
+                                    </div>
+                                    <div class="metadata-channel flex-row">
+                                        14 M views
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img-video flex-row">
+                <div class="flex-row">
+                    <div class="video-img">
+                        <iframe width="160" height="100" src="https://www.youtube.com/embed/wWEF5Ie89ug" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="metadata">
+                        <a href="#">
+                            <h3>
+                                Ten Thousand Hours - Motivational Video
+                            </h3>
+                            <div class="metadata2">
+                                <div class="metadata-channel flex-row">
+                                    Anna Mkenzy
+                                </div>
+                                <div class="metadata-channel flex-row">
+                                    15 M views
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-video flex-row">
+                <div class="flex-row">
+                    <div class="video-img">
+                        <iframe width="160" height="100" src="https://www.youtube.com/embed/wWEF5Ie89ug" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="metadata">
+                        <a href="#">
+                            <h3>
+                                Ten Thousand Hours - Motivational Video
+                            </h3>
+                            <div class="metadata2">
+                                <div class="metadata-channel flex-row">
+                                    Anna Mkenzy
+                                </div>
+                                <div class="metadata-channel flex-row">
+                                    15 M views
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-video flex-row">
+                <div class="flex-row">
+                    <div class="video-img">
+                        <iframe width="160" height="100" src="https://www.youtube.com/embed/wWEF5Ie89ug" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="metadata">
+                        <a href="#">
+                            <h3>
+                                Ten Thousand Hours - Motivational Video
+                            </h3>
+                            <div class="metadata2">
+                                <div class="metadata-channel flex-row">
+                                    Anna Mkenzy
+                                </div>
+                                <div class="metadata-channel flex-row">
+                                    15 M views
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FINISH #2 Logic section-->
 </body>
 </html>
-
